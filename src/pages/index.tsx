@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/router"
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <main className="container mx-auto p-4">
       <h1 className="text-4xl font-bold mb-8">MyScreen Dashboard</h1>
@@ -10,7 +13,7 @@ export default function Home() {
           <p className="text-gray-600 mb-4">
             MyScreen dashboard'a hoş geldiniz. Buradan filmlerinizi yönetebilir, favorilerinizi takip edebilirsiniz.
           </p>
-          <Button>Keşfet</Button>
+          <Button onClick={() => router.push('/login')}>Keşfet</Button>
         </div>
       </div>
     </main>

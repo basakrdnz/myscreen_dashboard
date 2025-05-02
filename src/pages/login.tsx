@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Login() {
   return (
@@ -47,6 +48,10 @@ export default function Login() {
             </Button>
           </div>
         </form>
+        <div className="text-center mt-4">
+          <span className="text-gray-600">Hesabınız yok mu? </span>
+          <Link href="/register" className="text-blue-600 hover:underline font-medium">Üye Ol</Link>
+        </div>
       </div>
     </div>
   )
